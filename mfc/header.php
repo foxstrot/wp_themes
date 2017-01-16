@@ -25,8 +25,9 @@
 				echo ( is_home() ) ? '<h1>' : ''; ?>
 
 				<a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="blog-name">
+				<img src="<?php echo get_stylesheet_directory_uri()?>/img/logotip.png" alt="Logo" class="custom-logo custom-logo-left">
 					<?php do_action( 'basic_before_blogname_in_logo' );
-					bloginfo( 'name' );
+					
 					do_action( 'basic_after_blogname_in_logo' ); ?>
 				</a>
 

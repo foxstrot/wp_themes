@@ -33,10 +33,7 @@
 		</div>
 
 		<div class="<?php echo apply_filters( 'basic_footer_themeby_class', 'themeby col6 tr' );?>">
-			<p id="designedby">
-				<?php _e('Theme by', 'basic'); ?>
-				<!--noindex--><a href="<?php echo BASIC_THEME_URI; ?>" target="_blank" rel="external nofollow"><?php _e('WP Puzzle', 'basic'); ?></a><!--/noindex-->
-			</p>
+			
 			<?php $counters = basic_get_theme_option('footer_counters'); ?>
 			<div class="footer-counter"><?php echo wp_specialchars_decode( $counters, ENT_QUOTES ); ?></div>
 		</div>

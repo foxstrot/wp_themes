@@ -31,7 +31,7 @@ function basic_customizer_css() {
 	}
 
 	$main_color = basic_get_theme_option( 'maincolor' );
-	if ( ! empty( $main_color ) && '#936' != $main_color && '#993366' != $main_color ) {
+	if ( ! empty( $main_color ) && '#d2644f' != $main_color && '#993366' != $main_color ) {
 
 		$main_color_css = "a:hover,#logo,.bx-controls a:hover .fa{color:$main_color}";
 		$main_color_css .= "a:hover{color:$main_color}";

@@ -118,7 +118,7 @@ function basic_customizer_init( $wp_customize ) {
 	// site descriptions
 	$wp_customize->add_setting( BASIC_OPTION_NAME . '[showsitedesc]', array(
 		'type'              => 'option',
-		'default'           => '1',
+		'default'           => '0',
 		'sanitize_callback' => 'sanitize_key',
 //		'sanitize_callback' => 'basic_sanitize_checkbox',
 		'transport'         => $transport
@@ -226,7 +226,7 @@ function basic_customizer_init( $wp_customize ) {
 		BASIC_OPTION_NAME . '[maincolor]',
 		array(
 			'type'              => 'option',
-			'default'           => '#936',
+			'default'           => '#d2644f',
 			'priority'          => 10,
 			'sanitize_callback' => 'sanitize_hex_color',
 			'transport'         => $transport
@@ -809,7 +809,7 @@ function basic_customizer_init( $wp_customize ) {
 		BASIC_OPTION_NAME . '[copyright_text]',
 		array(
 			'type'              => 'option',
-			'default'           => __( 'All rights reserved', 'basic' ),
+			'default'           => __( '', 'basic' ),
 			'sanitize_callback' => 'basic_sanitize_text',
 			'transport'         => $transport
 		)
@@ -842,127 +842,6 @@ function basic_customizer_init( $wp_customize ) {
 			'type'     => 'textarea',
 		)
 	);
-
-
-	// ----------  A D D I T I O N A L   C U S T O M   D E S I G N  ----------
-
-
-	$wp_customize->add_section(
-		'basic_additional_design',
-		array(
-			'title'       => __( 'Design skins for theme BASIC', 'basic' ),
-//			'title'       => __( 'Design skins', 'basic' ),
-//			'title'       => __( 'Design presets', 'basic' ),
-			'description' => __( 'Get child theme with additional design!', 'basic' ),
-//			'description' => __( 'Get child theme with individual design presets!', 'basic' ),
-			'priority'    => 200,
-		)
-	);
-
-	// ----
-
-	//
-	$wp_customize->add_setting( 'basicchild_lobelia', array(
-		'type'              => 'option',
-		'sanitize_callback' => 'basic_sanitize_html',
-		'default'           => '<a href="' . BASIC_THEME_URI . 'basic-lobelia/" target="_blank"><img src="' . BASIC_THEME_URI . 'wp-content/uploads/2016/08/lobelia-mini.png" alt="lobelia"></a>',
-	) );
-	$wp_customize->add_control( new Basic_Child_Design_WPCC( $wp_customize, 'basicchild_lobelia',
-		array( 'label' => 'Lobelia', 'section' => 'basic_additional_design', 'settings' => 'basicchild_lobelia', )
-	) );
-
-	//
-	$wp_customize->add_setting( 'basicchild_peachtheme', array(
-		'type'              => 'option',
-		'sanitize_callback' => 'basic_sanitize_html',
-		'default'           => '<a href="' . BASIC_THEME_URI . 'basic-peachtheme/" target="_blank"><img src="' . BASIC_THEME_URI . 'wp-content/uploads/2016/08/peachtheme-mini.png" alt="peachtheme"></a>',
-	) );
-	$wp_customize->add_control( new Basic_Child_Design_WPCC( $wp_customize, 'basicchild_peachtheme',
-		array( 'label' => 'PeachTheme', 'section' => 'basic_additional_design', 'settings' => 'basicchild_peachtheme', )
-	) );
-
-	//
-	$wp_customize->add_setting( 'basicchild_westcoasts', array(
-		'type'              => 'option',
-		'sanitize_callback' => 'basic_sanitize_html',
-		'default'           => '<a href="' . BASIC_THEME_URI . 'basic-westcoasts/" target="_blank"><img src="' . BASIC_THEME_URI . 'wp-content/uploads/2016/08/westcoasts-mini.png" alt="westcoasts"></a>',
-	) );
-	$wp_customize->add_control( new Basic_Child_Design_WPCC( $wp_customize, 'basicchild_westcoasts',
-		array( 'label' => 'WestCoasts', 'section' => 'basic_additional_design', 'settings' => 'basicchild_westcoasts', )
-	) );
-
-	//
-	$wp_customize->add_setting( 'basicchild_travelblog', array(
-		'type'              => 'option',
-		'sanitize_callback' => 'basic_sanitize_html',
-		'default'           => '<a href="' . BASIC_THEME_URI . 'basic-travelblog/" target="_blank"><img src="' . BASIC_THEME_URI . 'wp-content/uploads/2016/08/travelblog-mini.png" alt="travelblog"></a>',
-	) );
-	$wp_customize->add_control( new Basic_Child_Design_WPCC( $wp_customize, 'basicchild_travelblog',
-		array( 'label' => 'TravelBlog', 'section' => 'basic_additional_design', 'settings' => 'basicchild_travelblog', )
-	) );
-
-	//
-	$wp_customize->add_setting( 'basicchild_yellowdreams', array(
-		'type'              => 'option',
-		'sanitize_callback' => 'basic_sanitize_html',
-		'default'           => '<a href="' . BASIC_THEME_URI . 'basic-yellowdreams/" target="_blank"><img src="' . BASIC_THEME_URI . 'wp-content/uploads/2016/08/yellowdreams-mini.png" alt="yellowdreams"></a>',
-	) );
-	$wp_customize->add_control( new Basic_Child_Design_WPCC( $wp_customize, 'basicchild_yellowdreams',
-		array(
-			'label'    => 'YellowDreams',
-			'section'  => 'basic_additional_design',
-			'settings' => 'basicchild_yellowdreams',
-		)
-	) );
-
-	//
-	$wp_customize->add_setting( 'basicchild_luminous', array(
-		'type'              => 'option',
-		'sanitize_callback' => 'basic_sanitize_html',
-		'default'           => '<a href="' . BASIC_THEME_URI . 'basic-luminous/" target="_blank"><img src="' . BASIC_THEME_URI . 'wp-content/uploads/2016/08/luminous-mini.png" alt="luminous"></a>',
-	) );
-	$wp_customize->add_control( new Basic_Child_Design_WPCC( $wp_customize, 'basicchild_luminous',
-		array( 'label' => 'Luminous', 'section' => 'basic_additional_design', 'settings' => 'basicchild_luminous', )
-	) );
-
-
-	// ----------  A D D I T I O N A L   C U S T O M   D E S I G N  ----------
-
-
-	$wp_customize->add_section( 'basic_other_themes',
-		array(
-			'title'       => __( 'WP Puzzle Themes', 'basic' ),
-			'description' => __( 'Choose great premium themes by WP Puzzle Shop!', 'basic' ),
-			'priority'    => 201,
-		)
-	);
-
-	//
-	$wp_customize->add_setting( 'basic_other_simplepuzzle', array(
-		'sanitize_callback' => 'basic_sanitize_html',
-		'default'           => '<a href="' . BASIC_THEME_URI . 'simple-puzzle/" target="_blank"><img src="' . BASIC_THEME_URI . 'wp-content/uploads/2016/09/simplepuzzle-mini.png" alt="simplepuzzle"></a>',
-	) );
-	$wp_customize->add_control( new Basic_Child_Design_WPCC( $wp_customize, 'basic_other_simplepuzzle',
-		array( 'label' => 'SimplePuzzle', 'section' => 'basic_other_themes', 'settings' => 'basic_other_simplepuzzle', )
-	) );
-
-	//
-	$wp_customize->add_setting( 'basic_other_fashionista', array(
-		'sanitize_callback' => 'basic_sanitize_html',
-		'default'           => '<a href="' . BASIC_THEME_URI . 'fashionista/" target="_blank"><img src="' . BASIC_THEME_URI . 'wp-content/uploads/2016/09/fashionista-mini.png" alt="fashionista"></a>',
-	) );
-	$wp_customize->add_control( new Basic_Child_Design_WPCC( $wp_customize, 'basic_other_fashionista',
-		array( 'label' => 'Fashionista', 'section' => 'basic_other_themes', 'settings' => 'basic_other_fashionista', )
-	) );
-
-	//
-	$wp_customize->add_setting( 'basic_other_sunsetcafe', array(
-		'sanitize_callback' => 'basic_sanitize_html',
-		'default'           => '<a href="' . BASIC_THEME_URI . 'sunsetcafe/" target="_blank"><img src="' . BASIC_THEME_URI . 'wp-content/uploads/2016/09/sunsetcafe-mini.png" alt="sunsetcafe"></a>',
-	) );
-	$wp_customize->add_control( new Basic_Child_Design_WPCC( $wp_customize, 'basic_other_sunsetcafe',
-		array( 'label' => 'SunsetCafe', 'section' => 'basic_other_themes', 'settings' => 'basic_other_sunsetcafe', )
-	) );
 
 }
 

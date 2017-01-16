@@ -1,14 +1,14 @@
 /*
- * Theme Name: Basic
- * Description: Basic is fully responsive, clean and minimal WordPress theme. It has various options in WordPress Customizer to change look of the theme - primary design color, background and header, page layout (left or right sidebar, full or centered content). Clean valid code, semantic markup, markup by Schema.org, full adaptation to mobile devices. Basic is ready to use with child themes and gives for developers simple design change with custom hooks and action. Translation Ready (English, Russian, Ukrainian, French are integrated).
- * Theme URI: http://wp-puzzle.com/basic/
- * Author: WP Puzzle
- * Author URI: http://wp-puzzle.com/
- * Version: 1.2.2
+ * Theme Name: MFC
+ * Description: MFC is fully responsive, clean and minimal WordPress theme. It has various options in WordPress Customizer to change look of the theme - primary design color, background and header, page layout (left or right sidebar, full or centered content). Clean valid code, semantic markup, markup by Schema.org, full adaptation to mobile devices. Basic is ready to use with child themes and gives for developers simple design change with custom hooks and action. Translation Ready (English, Russian, Ukrainian, French are integrated).
+ * Theme URI: https://github.com/netvoxlab/wp_themes
+ * Author: Netvox Lab
+ * Author URI: http://www.netvoxlab.ru/
+ * Version: 1.0
  * License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Tags: two-columns, one-column, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, microformats
- * Text Domain: basic
+ * Text Domain: mfc
  */
 
 
@@ -38,7 +38,7 @@ body { width: 100%; min-width: 280px; background: #fff; }
 #content { width: 100%; float: none; }
 #sidebar { display: none; }
 #sidebar.block{ display: block;}
-#footer { width: 100%; padding: 20px 0; margin: 0; background: #936; }
+#footer { width: 100%; padding: 20px 0; margin: 0; background: #d2644f; }
 .maxwidth { margin: 0 auto; position: relative; width: 90%; max-width: 1080px; }
 body.custom-background .wrapper { margin: 0 auto; background: #fff; max-width: 1160px; }
 
@@ -65,7 +65,7 @@ body.custom-background .wrapper { margin: 0 auto; background: #fff; max-width: 1
 body { font: 16px/140% 'Open Sans', Tahoma, Verdana, Segoe, sans-serif; color: #222; word-wrap: break-word; }
 
 a { color: #222; }
-a:hover { color: #936; }
+a:hover { color: #d2644f; }
 
 p { padding: 0 0 1em 0; }
 p:last-child { padding-bottom: 0; }
@@ -92,7 +92,7 @@ blockquote, q {
 	color: #444;
 	font: normal 1em/120% 'PT Serif', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
 	background: #EFEFEF;
-	border-left: 3px solid #936;
+	border-left: 3px solid #d2644f;
 	border-radius: 3px;
 	display: block;
 }
@@ -163,7 +163,7 @@ input[type=color] {
 }
 input:focus, textarea:focus {
 	outline: none; 
-	border-color: #936; 
+	border-color: #d2644f; 
 	-webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.08); 
 	box-shadow: inset 0 0 8px rgba(0,0,0,0.08); 
 }
@@ -174,7 +174,7 @@ input[type=button],
 	height: 40px;
 	line-height: 20px;
 	border: 0;
-	background-color: #936;
+	background-color: #d2644f;
 	color: #fff;
 	cursor: pointer;
 }
@@ -194,7 +194,7 @@ input[type=button]:hover,
 .sitetitle { text-align: center; }
 .logo { margin: 30px auto; }
 #logo { display: block; margin: 0; padding: 0; font: bold 60px/50px 'PT Serif', Tahoma, Verdana, Segoe, sans-serif; 
-	color: #936; text-decoration: none; letter-spacing: -0.02em; }
+	color: #d2644f; text-decoration: none; letter-spacing: -0.02em; }
 #logo:hover { opacity: 0.9; }
 .sitedescription {/*text-align: center;*/padding-top: 10px;}
 /*body.wp-custom-logo #logo { display: none;}*/
@@ -211,12 +211,12 @@ input[type=button]:hover,
 /* mobile navigation button */
 #mobile-menu { display: block; padding: 15px 0; text-decoration: none; text-transform: uppercase; 
 	text-align: center; font-weight: 500; cursor: pointer; background: #eee; z-index: 999; position: relative; }
-#mobile-menu:hover { background: #936; color: #fff; }
+#mobile-menu:hover { background: #d2644f; color: #fff; }
 
 
 /* header navigation */
 .topnav { background: #FFF; }
-.top-menu { background: #936; position: absolute; z-index: 1000; width: 90%; }
+.top-menu { background: #d2644f; position: absolute; z-index: 1000; width: 90%; }
 .top-menu li { padding: 0; display: block; }
 .top-menu li a, .top-menu li span { display: block; padding: 15px 20px; color: #fff; line-height: 20px; 
 	font-weight: 500; text-decoration: none; position: relative; cursor: pointer; }
@@ -294,7 +294,7 @@ input[type=button]:hover,
 .thumbnail { max-width: 30%; height: auto; }
 
 .more-link-box {text-align: right;}
-.more-link { display: inline-block; padding: 10px 20px; background: #936; color: #fff; text-decoration: none; -webkit-border-radius: 5px; border-radius: 5px; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; position: relative; }
+.more-link { display: inline-block; padding: 10px 20px; background: #d2644f; color: #fff; text-decoration: none; -webkit-border-radius: 5px; border-radius: 5px; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; position: relative; }
 .more-link:after { content: '➤'; float: right; margin-left: 10px; margin-right: -5px; }
 .more-link:hover { opacity: 0.8; color: #fff; }
 
@@ -382,7 +382,7 @@ img.alignright, .alignright { float: right; margin-left: 20px; margin-right: 0; 
 .nav-links { line-height: 40px; }
 .nav-links a { text-decoration: none; }
 .nav-links .page-numbers { padding: 4px 12px 6px; margin-right: 5px; background: #ddd; color: #444; -webkit-border-radius: 4px; border-radius: 4px; -webkit-transition: background, color 0.3s; transition: background, color 0.3s; }
-.nav-links a:hover, .nav-links .current { background: #936; color: #fff; }
+.nav-links a:hover, .nav-links .current { background: #d2644f; color: #fff; }
 .nav-links .total { margin-right: 5px; }
 
 
@@ -509,7 +509,7 @@ input.search_submit { position: absolute; top: 0; right: 0; width: 40px; padding
 	.top-menu li { display: inline-block; position: relative; }
 	.top-menu li a { border-bottom: 0; font-weight: normal; color: #fff; -webkit-transition: background 0.3s; transition: background 0.3s; }
 	.top-menu > li:hover > a { background: rgba(255,255,255,0.3);  }
-	.top-menu .sub-menu, .top-menu .children { display: none; margin: 0; position: absolute; top: 100%; left: 0; background: #936; width: 300px; z-index: 1000;  box-shadow: 3px 3px 0 rgba(0,0,0,0.1); }
+	.top-menu .sub-menu, .top-menu .children { display: none; margin: 0; position: absolute; top: 100%; left: 0; background: #d2644f; width: 300px; z-index: 1000;  box-shadow: 3px 3px 0 rgba(0,0,0,0.1); }
 	.top-menu .sub-menu li, .top-menu .children li { display: block; text-align: left;}
 	.top-menu .sub-menu li a, .top-menu .children li a { color: #fff; border-top: 1px solid rgba(255,255,255,0.2); }
 	.top-menu li:hover > .sub-menu,
