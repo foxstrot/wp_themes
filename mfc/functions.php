@@ -237,3 +237,16 @@ if ( is_admin() ) :
 	require_once( get_template_directory() . '/inc/admin/meta-boxes.php' );
 
 endif;
+
+/* ==========================================================================
+ *  admin bar remove
+  ========================================================================== */
+if ( ! function_exists( 'remove_admin_bar' ) ) :
+ function remove_admin_bar() {
+  if (!current_user_can('administrator') && !is_admin()) {
+    show_admin_bar(false);
+  }
+ }
+endif;
+add_action('after_setup_theme', 'remove_admin_bar');
+/* ========================================================================== */
