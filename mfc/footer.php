@@ -26,7 +26,7 @@
 	<div class="<?php echo apply_filters( 'basic_footer_copyrights_class', 'copyrights maxwidth grid' );?>">
 		<div class="<?php echo apply_filters( 'basic_footer_copytext_class', 'copytext col6' );?>">
 			<p id="copy">
-				<!--noindex--><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="nofollow"><?php bloginfo('name'); ?></a><!--/noindex--> &copy; <?php echo date("Y",time()); ?>
+				<!--noindex--><a href="<?php echo esc_url("http://www.redoc.ru/"); ?>" rel="nofollow">Разработано на платформе Re:Doc</a><!--/noindex--> &copy; <?php echo date("Y",time()); ?>
 				<br/>
 				<span class="copyright-text"><?php echo basic_get_theme_option('copyright_text'); ?></span>
 			</p>
