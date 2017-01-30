@@ -243,8 +243,10 @@ endif;
   ========================================================================== */
 if ( ! function_exists( 'remove_admin_bar' ) ) :
  function remove_admin_bar() {
-  if (!current_user_can('administrator') && !is_admin()) {
-    show_admin_bar(false);
+  if (current_user_can('editor') || current_user_can('author') || current_user_can('administrator') || is_admin()) {
+    show_admin_bar(true);
+  } else {
+	show_admin_bar(false);
   }
  }
 endif;
