@@ -263,8 +263,22 @@ add_action('after_setup_theme', 'remove_admin_bar');
 	global $is_safari;
 	if($is_safari){
 		wp_enqueue_style('custom-style', get_template_directory_uri() . '/style.css');
-		$custom_css = ".mu_register #user_email,.mu_register #user_name{ height: 35px; }";
+		$custom_css = ".mu_register #user_email,.mu_register #user_name{ height: 35px; }
+		input[type=text], 
+		input[type=password], 
+		input[type=email], 
+		input[type=url], 
+		input[type=tel], 
+		input[type=date], 
+		input[type=datetime], 
+		input[type=datetime-local], 
+		input[type=time],
+		input[type=month], 
+		input[type=week], 
+		input[type=number], 
+		input[type=search] {height: 40px;}";
 		wp_add_inline_style( 'custom-style', $custom_css );
+		
 	}
 }
 add_action( 'wp_enqueue_scripts', 'safari_styles_method' );
