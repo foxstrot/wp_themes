@@ -5,7 +5,7 @@
  * @subpackage ownRadio
  */
 
-define('NETVOXLAB_OWNRADIO_THEME_VERSION', '2017.02.16');
+define('NETVOXLAB_OWNRADIO_THEME_VERSION', '2017.04.24');
 add_theme_support('title-tag'); // теперь тайтл управляется самим вп
 
 register_nav_menus(array( // Регистрируем 2 меню
